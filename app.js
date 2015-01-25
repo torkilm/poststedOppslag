@@ -5,6 +5,7 @@ app.controller('postCtl', ['$scope', 'postLookup',
     $scope.Search = function () {
       poststed.get({'pnr':$scope.postNr}, function (data) {
         $scope.error = "";
+        // Check if data is valid
         if (data.valid) {
           $scope.Resultat = data;
           $scope.sted = data.result;
